@@ -3,7 +3,7 @@ encrypted notepad store note in sqlite by cordova plugin
 
 Which is a very nice demo/app to show what an app that ionic can make.
 
-*** This app also used following plugins***
+## This app also used following plugins ##
 
   1. https://github.com/shenmingxuanyi/Angular-GestureLock
   
