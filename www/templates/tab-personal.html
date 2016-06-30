@@ -1,0 +1,61 @@
+<ion-view ng-show="showPWD">
+  <ion-header-bar class="bar-stable text-center">
+    <h1 class="title">{{title}}</h1>
+  </ion-header-bar>
+  <ion-content class="gestureLock-body">
+    <div align="center" style="margin-top: 60px">
+      <canvas id="gestureLock2"></canvas>
+    </div>
+  </ion-content>
+</ion-view>
+
+<ion-view ng-show="!showPWD">
+  <ion-header-bar class="bar-stable text-center">
+    <div class="buttons">
+      <button class="button" ng-click="cancelDelete()" ng-show="!isShow" style="color: #FF4131">取消</button>
+      <i class="icon fa fa-trash-o lockEncoded" style="font-size: 30px;margin-left: 10px;margin-top: 3px"
+         ng-click="delete()" ng-show="isShow"></i>
+    </div>
+    <h1 class="title">私人空间</h1>
+    <div class="buttons">
+      <button class="button" ng-click="deleteBatchConfirm()" ng-show="!isShow" style="color: #FF4131">删除</button>
+      <i class="icon ion-plus lockEncoded" style="font-size: 30px;margin-right: 10px;margin-top: 3px"  ng-click="addNote()" ng-show="isShow"></i>
+    </div>
+  </ion-header-bar>
+
+
+  <ion-content>
+    <ion-list class="list" style="margin-bottom: 0px" ng-repeat="r in records">{{records.index()}}
+      <ion-item class="item-divider lockEncoded font10">{{r.year}}年{{r.month}}月</ion-item>
+      <ion-item style="height: 77px" ng-repeat="c in r.other" ng-click="showDetail(c)">
+        <div class="item-avatar item-icon-right" style="min-height: 40px">
+          <p style="line-height: 40px;">{{c.day}}</p>
+          <h2 class="font20">[密]{{c.title}}</h2>
+          <p class="font10">{{c.weekday}} {{c.time}}</p>
+          <i class="icon" ng-show="!isShow"><label class="checkbox">
+            <input type="checkbox" ng-click="clickCheckBox(c.id)">
+          </label></i>
+        </div>
+        <ion-option-button class="button-assertive" ng-click="deleteSingle(c.id)"> 删除</ion-option-button>
+      </ion-item>
+    </ion-list>
+    <!--<ion-list class="list" style="margin-bottom: 0px">-->
+      <!--<ion-item class="item-divider lockEncoded font10">2000年12月</ion-item>-->
+      <!--<ion-item style="height: 77px">-->
+        <!--<div class="item-avatar item-icon-right item-remove-animate" style="min-height: 40px">-->
+          <!--<p style="line-height: 40px;">12</p>-->
+          <!--<h2 class="font20">[密]我是标题</h2>-->
+          <!--<p class="font10">星期一 19:20</p>-->
+          <!--<i class="icon" ng-show="!isShow"><label class="checkbox">-->
+            <!--<input type="checkbox" ng-click="clickCheckBox('1')">-->
+          <!--</label></i>-->
+          <!--&lt;!&ndash;<i class="icon" style="font-size:medium;background-color: red;right: 0px;" ng-show="showDel">&nbsp;&nbsp;&nbsp;删除&nbsp;&nbsp;</i>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<ion-option-button class="button-assertive" ng-click="deleteSingle('1')"> 删除</ion-option-button>-->
+      <!--</ion-item>-->
+    <!--</ion-list>-->
+  </ion-content>
+</ion-view>
+
+
+

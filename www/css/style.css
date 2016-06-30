@@ -1,0 +1,87 @@
+/* Empty. Add your own CSS if you like */
+.tab-item {
+  border-color: #33cd5;
+}
+
+.tab-item-active {
+  border-color: #33cd5;
+}
+
+.tab-item-actived {
+  border-color: #33cd5;
+}
+
+.tabs-striped {
+  border-color: #33cd5;
+}
+
+.scroll, .overflow-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.item-body {
+  padding: 8px;
+}
+
+.font10 {
+  font-size: 10px;
+}
+
+.font20 {
+  font-size: 20px;
+}
+
+.lockEncoded {
+  color: #1abc9c;
+}
+
+.color-9e{
+    color:#9e9e9e;
+}
+
+.lockNotEncoded {
+  color: #000;
+}
+
+ion-tabs.tabs-color-active-balanced .tab-item.tab-item-active, ion-tabs.tabs-color-active-balanced .tab-item.active, ion-tabs.tabs-color-active-balanced .tab-item.activated {
+  color: #1abc9c;
+}
+
+.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
+  border-color: #1abc9c;
+}
+.loading-container .loading {
+  background-color: transparent;
+}
+.item-avatar > p:first-child {
+  position: absolute;
+  line-height: 40px;
+  top: 17px;
+  left: 20px;
+  max-width: 40px;
+  max-height: 40px;
+  width: 100%;
+  height: 100%;
+  font-size: 33px;
+}
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before{
+  background: #FF4131;
+  border-color: #FF4131;
+}
+
+.gestureLock-body{
+  background-color:#1abc9c;
+}
+
+.popover {
+  height: auto !important;
+}
+.popover ion-header-bar {
+  position: relative;
+}
+
+.popover ion-content {
+  top: 0;
+  position: relative;
+}

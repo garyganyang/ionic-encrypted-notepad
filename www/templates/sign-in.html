@@ -1,0 +1,26 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+
+
+<ion-header-bar class="bar-stable text-center">
+  <div class="buttons">
+    <button class="button" ng-click="goBack()"><i class="icon  fa fa-angle-left lockEncoded"></i></button>
+  </div>
+  <h1 class="title">{{title}}</h1>
+  <div class="buttons">
+    <button class="button" ng-click="share()"><i class="icon ion-android-share-alt lockEncoded"></i></button>
+  </div>
+</ion-header-bar>
+
+
+<ion-content class="gestureLock-body">
+
+
+  <div align="center" style="margin-top: 60px">
+    <canvas id="gestureLock0"></canvas>
+  </div>
+
+</ion-content>
